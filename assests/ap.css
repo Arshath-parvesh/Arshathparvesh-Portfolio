@@ -8,24 +8,31 @@ body{
     overflow: hidden;
     letter-spacing: 2px;
 }
-.firstpage{
-    min-height: 530px;
+h1{
+    color:orangered;
+    font-family: "Roboto";
     text-align: center;
-    justify-content: center;
-    align-items: center;
+    font-size: 50px;
+    padding-top: 25%;
 }
-body .bglogo{
-    font-family: Alex Brush;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 350px;
-    color: rgba(255, 255, 255, 0.03);
-    padding-left: 400px;
-    padding-top: 50px;
-    position: fixed;
-    user-select: none;
-    z-index:0;
+h2{
+    color: white;
+    text-align: center;
+    font-size: 40px;
 }
+img{
+    animation: updown 5s infinite;
+}
+p{
+    text-align: left,justify;
+    color: white;
+    font-size:20px ;
+    padding-bottom:15%;
+}
+b{
+    color:yellow;
+}
+/* navbar */
 main .navbar{
     position: fixed;
     z-index: 100;
@@ -47,37 +54,47 @@ main .navbar span:active,a:hover {
     padding-top: 7px;
     user-select: none;
     z-index: 20;
+    user-select: none;
+}
+/* home page */
+.firstpage{
+    min-height: 530px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+body .bglogo{
+    font-family: Alex Brush;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 350px;
+    color: rgba(255, 255, 255, 0.03);
+    padding-left: 400px;
+    padding-top: 50px;
+    position: fixed;
+    user-select: none;
+    z-index:0;
 }
 .Name h1{
     color:orangered;
     font-family: "Roboto";
     text-align: center;
     font-size: 70px;
-    padding-top: 25%;
+    padding-top: 18%;
 }
 .Name h2{
     color: white;
     text-align: center;
     font-size: 50px;
 }
-h1{
-    color:orangered;
-    font-family: "Roboto";
-    text-align: center;
-    font-size: 50px;
-    padding-top: 25%;
-}
-h2{
-    color: white;
-    text-align: center;
-    font-size: 40px;
-}
+
 main{    
     border-radius: 14% ;
     border-width: 100%;
     border-bottom:8px solid orangered;
-    padding-bottom: 15%;
+    padding-bottom: 8.5%;
 } 
+/* About */
 .AboutMe h1{
     text-align:left;
     color: orangered;
@@ -91,125 +108,34 @@ main{
     padding-top: 15%;
     padding-left:-25% ;
 }
-img{
-    animation: updown 5s infinite;
-}
-p{
-    text-align: left,justify;
-    color: white;
-    font-size:20px ;
-    padding-bottom:15%;
-}
+
 .carousel-inner p{
     font-size:20px ;
 }
-b{
-    color:yellow;
-}
+
 .AboutMe{
     border-width: 100%;
     border-bottom:1px solid rgb(148, 143, 143);
+    padding: 5% 0 8% 0;
 }
+/* Skills page */
 .Skills h1{
     text-align:center;
-    padding-top: 5%;
-}
-.Skills h2{
-    text-align:center;
-    color: white;
 }
 .Skills{
     border-width: 100%;
     border-bottom:1px solid white;
     font-size: 500%;
     color: #b030b0;
-}
-.Skills img{
-    padding-bottom: 100px;
-    z-index: 1;
-    max-width: 500px;
+    padding: 3% 0 10% 0;
 }
 .skills-text{
     text-align: center;
-} 
-.fa-html5:hover{
-    color: orangered;
 }
-.fa-css3-alt:hover{
-    color: rgb(0, 121, 235);
-}
-.fa-js:hover{
-    color: rgb(239, 255, 9);
-}
-.fa-java:hover{
-    color: orangered;
-}
-.fa-bootstrap:hover{
-    color: rgb(61, 2, 128);
-}
-.fst{
-    animation: up 2s infinite;
-}
-.snd{
-    animation: sndup 2s infinite;
-}
-
-.MyContribution{
-    border-width: 100%;
-    border-bottom:1px solid white;
-    padding-bottom: 6%;
-} 
-.MyContribution h1{
-    padding-top: 10%;
-    padding-bottom: 6%;
-}
-.workcard{
-    opacity: 0.5;
-}
-.workcard:hover{
-    opacity: 1;
-}
-.inspiration{
-    border-width: 100%;
-    border-bottom:1px solid white;
-}
-.inspiration h1{
-    padding-top: 10%;
-}
-.inspiration p{
-    text-align:center;
-    font-size: 35px;
-}
-.MeAt h1{
-    padding-top: 5%;
-}
-.MeAt nav{
-    width:150%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-top: 5%;
-    padding-left: 325px;
-}
-.MeAt nav a{
-    color:white;
-    margin-right: 10%;
-    font-size: 40px;
-    z-index: 30;
-    position:relative; 
-}
-footer p{
-    text-align: center;
-    padding: 5%;
-    padding-top: 7%;
-    margin:auto;
-}
-.socialmedia a:hover{
-    color:green;
-    transform: scale(1.2);
-}
-footer p:hover{
-    color: orangered;
+.line{
+    border-right: 2.5px solid orangered;
+    width:1px;
+    margin: 18% 0 2% 0;
 }
 #skills-icons ul li {
     list-style: none;
@@ -253,6 +179,249 @@ ul {
     text-rendering: auto;
     line-height: 1;
 }
+.skills h2{
+    color: orangered;
+}
+.fa-html5:hover{
+    color: orangered;
+}
+.fa-css3-alt:hover{
+    color: rgb(0, 121, 235);
+}
+.fa-js:hover{
+    color: rgb(239, 255, 9);
+}
+.fa-java:hover{
+    color: orangered;
+}
+.fa-bootstrap:hover{
+    color: rgb(61, 2, 128);
+}
+.fa-figma:hover{
+    color: #00FFE0;
+}
+.fa-react:hover{
+    color: #00FFE0;
+}
+.fa-node-js:hover{
+    color: #17A400;
+}
+.fst{
+    animation: up 2s infinite;
+}
+/* .snd{
+    animation: sndup 2s infinite;
+} */
+/* Work */
+.MyContribution{
+    border-width: 100%;
+    border-bottom:1px solid white;
+    padding-bottom: 6%;
+} 
+.MyContribution h1{
+    padding-top: 10%;
+    padding-bottom: 6%;
+}
+.workcard{
+    opacity: 0.5;
+}
+.workcard:hover{
+    opacity: 1;
+}
+.inspiration{
+    border-width: 100%;
+    border-bottom:1px solid white;
+}
+.inspiration h1{
+    padding-top: 10%;
+}
+.inspiration p{
+    text-align:center;
+    font-size: 35px;
+}
+/* Social media */
+.MeAt h1{
+    padding-top: 5%;
+}
+.MeAt nav{
+    width:150%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 5%;
+    padding-left: 325px;
+}
+.MeAt nav a{
+    color:white;
+    margin-right: 10%;
+    font-size: 40px;
+    z-index: 30;
+    position:relative; 
+}
+footer p{
+    text-align: center;
+    padding:0 5% 5% 5%;
+    margin:auto;
+    user-select: none;
+}
+.socialmedia a:hover{
+    color:green;
+    transform: scale(1.2);
+}
+/* button */
+.ArrowButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    font-family: consolas;
+
+}
+.ArrowButton a{
+    position: relative;
+    display: inline-block;
+    padding:15px 30px;
+    color: rgb(255, 102, 31);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+
+}
+.ArrowButton a:hover{
+    color: orangered;
+    background: rgb(255, 102, 31);
+    box-shadow: 0 0 10px rgb(255, 102, 31), 0 0 40px rgb(255, 102, 31), 0 0 80px rgb(255, 102, 31);
+    transition-delay: 1.25s;
+
+}
+.ArrowButton a span{
+    position: absolute;
+    display: block;
+
+}
+.ArrowButton a span:nth-child(1){
+    top:0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,rgb(255, 102, 31));
+
+}
+.ArrowButton a:hover span:nth-child(1){
+    left:100%;
+    transition: 0.5s;
+}
+.ArrowButton a span:nth-child(3){
+    bottom:0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,rgb(255, 102, 31));
+
+}
+.ArrowButton a:hover span:nth-child(3){
+    right:100%;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+.ArrowButton a span:nth-child(2){
+    top:-100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,rgb(255, 102, 31));
+
+}
+.ArrowButton a:hover span:nth-child(2){
+    top:100%;
+    transition: 0.5s;
+    transition-delay: 0.25s;
+}
+.ArrowButton a span:nth-child(4){
+    bottom:-100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,rgb(255, 102, 31));
+
+}
+.ArrowButton a:hover span:nth-child(4){
+    bottom:100%;
+    transition: 0.5s;
+    transition-delay: 0.75s;
+}
+/* Button */
+.Button{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+.link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.link a{
+    position:relative;
+    width: 200px;
+    height: 60px;
+    display: block;
+    margin: 20px;
+}
+.link a:before,
+.link a:after{
+    content: '';
+    position: absolute;
+    inset:0;
+    background: #f00;
+    transition:0.5s ;
+      
+}
+.link a:nth-child(1)::before,
+.link a:nth-child(1):after{
+    background: linear-gradient(45deg,orangered,#0e1538,#0e1538,darkgreen);
+}
+.link a:hover::before{
+    inset:-3px; 
+}
+.link a:hover::after{
+    inset:-3px; 
+    filter: blur(10px);
+}
+.link a span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: #010620;
+    z-index: 10;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    border: 1px solid #040a29;
+    overflow: hidden;
+}
+.link a span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:-50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.075);
+    transform: skew(25deg);
+}
+
 @keyframes updown{
     0%{
         transform: translateY(-5px);
@@ -287,6 +456,7 @@ ul {
         transform: scale(1.1);
     }
 } */
+
 @media(max-width: 1200px){
     .MeAt nav{
         padding-left: 200px;
@@ -326,15 +496,14 @@ ul {
     }
 }
 @media(max-width: 991px){
-    .Skills img{
-        /* visibility: hidden; */
-        display: none;
-    }
     .nav-item{
         max-height: 25px;
     }
     main .navbar{
         height: auto;
+    }
+    #skills-icons {
+        font-size: 65px;
     }
 }
 @media(max-width: 965px){
@@ -356,19 +525,6 @@ ul {
     .Name h2{
         font-size: 35px;
     }
-    
-    #skills-icons {
-        /* display: flex; */
-        /* flex-direction: column-reverse; */
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 20px;
-        width:100%;
-        /* padding-left: 100px; */
-        padding-top: -50px;
-        margin-left: 10%;
-    
-    }
     .col-md-6{
         width:100%;
     }
@@ -389,9 +545,6 @@ ul {
         padding-left: 150px;
         padding-top: 80px;
     }
-    .Skills img{
-        padding-top: 50px;
-    }
     .MeAt nav{
         padding-left: 80px;
     }
@@ -409,13 +562,14 @@ ul {
         font-size:15px ;
     }
     #skills-icons {
-        font-size: 65px;
+        font-size: 60px;
+        margin-top:-10%;
     }
     #Aboutme img{
         padding-left: -35%;
     }
     #Aboutme p{
-        font-size: 10px;
+        font-size: 15px;
     }
     
 }
@@ -452,9 +606,6 @@ ul {
         padding-left: -70%;
         padding-right: 50%;
     }
-    #Aboutme p{
-        font-size: 8px;
-    }
 }
 @media(max-width: 430px){
     .Name h1{
@@ -473,9 +624,6 @@ ul {
     #Aboutme img{
         padding-left: -70%;
         padding-right: 70%;
-    }
-    #Aboutme p{
-        font-size: 7px;
     }
 }
 @media(max-width: 390px){
