@@ -8,6 +8,129 @@ body{
     overflow: hidden;
     letter-spacing: 2px;
 }
+/* preloader */
+.preloader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #121213;
+}
+.loader{
+    position: relative;
+    width: 200px;
+    height:200px;
+    background:#1a1a1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    color: #fff;
+    overflow: hidden;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
+}
+.loader:hover{
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+}
+.loader span{
+    position: absolute;
+    display: block;
+}
+.loader span:nth-child(1){
+    top:0;
+    left: -100%;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, transparent,#03e9f4);
+    animation: animate1 2s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left:100%
+    }
+}
+.loader span:nth-child(3){
+    bottom:0;
+    right: -100%;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(270deg, transparent,#03e9f4);
+    animation: animate3 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right:100%
+    }
+}
+.loader span:nth-child(2){
+    top:-100%;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent,#03e9f4);
+    animation: animate2 2s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top:100%
+    }
+}
+.loader span:nth-child(4){
+    bottom:-100%;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent,#03e9f4);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1.5s;
+}
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom:100%
+    }
+}
+.loader h3{
+    font-family: consolas;
+    color: #03e9f4;
+    overflow: hidden;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    border-right: 1px solid #03e9f4;
+    animation: typing 5s steps(10)infinite;
+}
+.loader:hover h3{
+    color:#111;
+    border-right: 1px solid #111;
+
+}
+@keyframes typing{
+    0%,90%,100%{
+        width: 0px;
+    }
+    30%,60%{
+        width: 123.89px;
+    }
+}
+/* normal */
 h1{
     color:orangered;
     font-family: "Roboto";
@@ -222,12 +345,137 @@ ul {
     padding-top: 10%;
     padding-bottom: 6%;
 }
-.workcard{
-    opacity: 0.5;
+.work{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
-.workcard:hover{
-    opacity: 1;
+.card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: #fff;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
+    transition: 1s;
 }
+.card:hover{
+    transform: translateX(50%);
+}
+    
+.card .imgBox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(60, 2, 60, 0.77) 0%, rgba(55, 1, 55, 0.84) 21.13%, rgba(46, 1, 46, 0.88) 36.9%, rgba(36, 1, 36, 0.89) 61.13%, #320132 100%);
+    transition: 1s;
+    box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
+}
+.card:hover .imgBox{
+    transform: rotateY(-180deg);
+}
+.card .imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    animation: none;
+}
+.card .imgBox img:nth-child(2){
+    transform: rotateY(180deg);
+    object-fit: contain;
+}
+.card .details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card .details .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card .details .content h2{
+    text-align: center;
+    font-weight: 700;
+    line-height: 1em;
+}
+.card .details .content h2 span{
+    color: #e21212;
+    font-size: 0.8em;
+}
+.card .details .content .social-icons{
+    position: relative;
+    display: flex;
+    margin-top: 10px;
+}
+.card .details .content .social-icons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 5px;
+    font-size: 18px;
+    transition: 0.2s;
+}
+.card .details .content .social-icons a:hover{
+    background: #e21212;
+}
+@media (max-width:670px){
+    .work{
+        margin-top: 13%;
+        margin-bottom: 18%;
+    }
+    .card:hover{
+        transform: translateY(50%);
+    }
+    .card:hover .imgBox{
+        transform-origin: top;
+        transform: translateY(-100%);
+    }
+    .card .details{
+        padding: 0;
+    }
+    .card .imgBox img:nth-child(2){
+        transform: rotateY(0);
+        transition: 1s;
+        opacity: 0;
+    }
+    .card:hover .imgBox img:nth-child(1){
+        transition: 1s;
+        opacity: 0;
+    }
+    .card .imgBox img:nth-child(1){
+        transition: 1s;
+        opacity: 1;
+    }
+    .card:hover .imgBox img:nth-child(2){
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* Quotes */
 .inspiration{
     border-width: 100%;
     border-bottom:1px solid white;
@@ -239,6 +487,7 @@ ul {
     text-align:center;
     font-size: 35px;
 }
+
 /* Social media */
 .MeAt h1{
     padding-top: 5%;
@@ -358,6 +607,7 @@ footer p{
     display:flex;
     justify-content:center;
     align-items: center;
+    z-index: 0;
 }
 .link{
     display: flex;
@@ -383,13 +633,13 @@ footer p{
 }
 .link a:nth-child(1)::before,
 .link a:nth-child(1):after{
-    background: linear-gradient(45deg,orangered,#0e1538,#0e1538,darkgreen);
+    background: linear-gradient(45deg,orangered,darkblue,darkblue,green);
 }
 .link a:hover::before{
-    inset:-3px; 
+    inset:-4px; 
 }
 .link a:hover::after{
-    inset:-3px; 
+    inset:-4px; 
     filter: blur(10px);
 }
 .link a span{
@@ -422,6 +672,7 @@ footer p{
     transform: skew(25deg);
 }
 
+/* animation */
 @keyframes updown{
     0%{
         transform: translateY(-5px);
